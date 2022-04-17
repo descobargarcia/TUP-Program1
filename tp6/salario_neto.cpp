@@ -37,14 +37,8 @@ int main()
             horas_extra = horas_semana - horas_norm;
         }
         salario_bruto = horas_norm*100 + horas_extra*100*1.50;
-        if (salario_bruto <= 3000)
-        {
-            impuestos = 0;
-        }
-        else
-        {
-            impuestos = 0.10*salario_bruto;
-        }
+        // Operador condicional ternario
+        impuestos = (salario_bruto <= 3000) ? 0 : 0.10*salario_bruto;
         salario_neto = salario_bruto - impuestos;
         cout.precision(2);
         cout << fixed;
