@@ -9,8 +9,8 @@ using namespace std;
 int main ()
 
 {
-    double PI = 3.141592653589793;
-    double r, h, volumen;
+    const double PI = 3.141592653589793;
+    double r, h;
     cout << endl;
     cout << "Ingrese el radio del cilindro: " << endl;
     cin >> r;
@@ -22,7 +22,7 @@ int main ()
     }
     else
     {
-        volumen = PI*h*r*r;
+        double volumen = PI*h*r*r;
         cout << endl;
         cout.precision(2);
         cout << fixed;

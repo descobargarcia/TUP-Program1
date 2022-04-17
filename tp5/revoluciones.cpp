@@ -9,7 +9,7 @@ using namespace std;
 int main ()
 
 {
-    double PI = 3.141592653589793;
+    const double PI = 3.141592653589793;
     double diam_pulg = 20;
     double dist_km;    
     cout << endl;

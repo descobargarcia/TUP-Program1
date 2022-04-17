@@ -7,8 +7,8 @@ using namespace std;
 int main ()
 
 {
-    double PI = 3.141592653589793;
-    double r, volumen;
+    const double PI = 3.141592653589793;
+    double r;
     cout << endl;
     cout << "Ingrese el radio de la esfera: " << endl;
     cin >> r;
@@ -18,7 +18,7 @@ int main ()
     }
     else
     {
-        volumen = (4.0 / 3.0)*PI*r*r*r;
+        double volumen = (4.0 / 3.0)*PI*r*r*r;
         cout << endl;
         cout.precision(2);
         cout << fixed;
