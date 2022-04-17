@@ -15,7 +15,6 @@ int main ()
     cout << "Ingrese el anio (numero): " << endl;
     cin >> year;
     cout << endl;
-
     /*(Si es múltiplo de 4 pero no de 100) O (es múltiplo de 400), es bisiesto.
     Uso de operadores and (&&), or (||) y condicional C++ (?) */
     resp = ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) ? "SI" : "NO";

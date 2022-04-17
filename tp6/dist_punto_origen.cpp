@@ -2,14 +2,15 @@
 y P2(x2,y2). Decir cuál es el que se encuentra más cerca del origen. 
 Ingresar todos los valores por terminal.*/
 
-#include <iostream>
 #include <cmath>
+#include <iostream>
+#include <string>
 using namespace std;
-
 int main () 
 
 {
-    double x1, y1, x2, y2, distP1, distP2;
+    double x1, y1, x2, y2;
+    string resp;
     cout << "Este programa compara las coordenadas de dos puntos P1 y P2" << endl;
     cout << "y decide cuál está más cerca del origen del plano cartesiano" << endl;
     cout << endl; 
@@ -24,23 +25,22 @@ int main ()
     cin >> x2; 
     cout << "Y2 = " << endl;
     cin >> y2;
-    distP1 = sqrt(x1*x1 + y1*y1);
-    distP2 = sqrt (x2*x2 + y2*y2);
+    double distP1 = sqrt(x1*x1 + y1*y1);
+    double distP2 = sqrt (x2*x2 + y2*y2);
+    double distMin = min(distP1, distP2);
     cout << endl; 
-    cout.precision(2);
-    cout << fixed;
     if (distP1 == distP2)
     {
-        cout << "P1 y P2 están a igual distancia del origen: " << distP1 << " unidades" << endl; 
-    }
-    else if (distP1 < distP2)
-    {
-        cout << "P1 está más cerca del origen. Distancia: " << distP1 << " unidades" << endl;
+        resp = "P1, P2. ";
     }
     else
     {
-        cout << "P2 está más cerca del origen. Distancia: " << distP2 << " unidades" << endl;
+        resp = (distMin == distP1) ? "P1. " : "P2. ";
     }
+    cout << "Punto(s) mas cercano(s) al origen: " << resp << endl; 
+    cout.precision(2);
+    cout << fixed;
+    cout << "Distancia: " << distMin << endl;
     cout << endl; 
     return 0;
 }

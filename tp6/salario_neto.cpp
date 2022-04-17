@@ -14,38 +14,32 @@ correspondientes (si corresponden).*/
 using namespace std;
 int main()
 {
-    double horas_semana, horas_extra, horas_norm;
-    double impuestos, salario_bruto, salario_neto;
+    int hSem;
     cout << endl; 
     cout << "Ingrese las horas semanales trabajadas: " << endl;
-    cin >> horas_semana; 
+    cin >> hSem; 
     cout << endl; 
-    if (horas_semana < 0)
+    if (hSem < 0)
     {
         cout << "ERROR: la cantidad de horas no puede ser negativa" << endl;
     }
     else 
     {
-        if (horas_semana < 38)
-        {
-            horas_norm = horas_semana;
-            horas_extra = 0;
-        }
-        else
-        {
-            horas_norm = 38;
-            horas_extra = horas_semana - horas_norm;
-        }
-        salario_bruto = horas_norm*100 + horas_extra*100*1.50;
+        const int HMAX = 38;
+        const double TASE_BASE = 100, SAL_LIM = 3000;
+        const double FACTOR_EXTRA = 1.5, PORC_IMP = 0.1;
+        int hNorm = min (hSem, HMAX);
         // Operador condicional ternario
-        impuestos = (salario_bruto <= 3000) ? 0 : 0.10*salario_bruto;
-        salario_neto = salario_bruto - impuestos;
+        int hExtra = (hSem > HMAX) ? (hSem - hNorm) : 0;
+        double salarioBruto = TASE_BASE*(hNorm + hExtra*FACTOR_EXTRA);
+        double impuestos = (salarioBruto > SAL_LIM) ? PORC_IMP*salarioBruto : 0;
+        double salarioNeto = salarioBruto - impuestos;
         cout.precision(2);
         cout << fixed;
-        cout << "Horas normales: " << horas_norm << endl;
-        cout << "Horas extra: " << horas_extra << endl;
+        cout << "Horas normales: " << hNorm << endl;
+        cout << "Horas extra: " << hExtra << endl;
         cout << "Impuestos semanales (pesos): " << impuestos << endl;
-        cout << "Salario neto semanal (pesos): " << salario_neto << endl;
+        cout << "Salario neto semanal (pesos): " << salarioNeto << endl;
     }
     cout << endl;
     return 0; 
