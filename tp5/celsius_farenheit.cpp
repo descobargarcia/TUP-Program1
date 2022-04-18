@@ -7,7 +7,7 @@ using namespace std;
 int main ()
 
 {
-    double tC;
+    float tC;
     cout << endl << "Ingrese la temperatura (C): " << endl; 
     cin >> tC;
     cout << endl; 
@@ -17,7 +17,7 @@ int main ()
     }
     else
     {
-        double tF = 32 + 9.0*tC/5.0;
+        float tF = 32 + 9.0*tC/5.0;
         cout.precision(2);
         cout << fixed;
         cout << "Temperatura (F): " << tF << endl;

@@ -6,11 +6,12 @@ un detalle del objeto a calcular)*/
 #include <iostream>
 using namespace std;
 
+const float PI = 3.14159265;
+
 int main ()
 
 {
-    const double PI = 3.141592653589793;
-    double r, h;
+    float r, h;
     cout << endl;
     cout << "Ingrese el radio del cilindro: " << endl;
     cin >> r;
@@ -22,7 +23,7 @@ int main ()
     }
     else
     {
-        double volumen = PI*h*r*r;
+        float volumen = PI*h*r*r;
         cout << endl;
         cout.precision(2);
         cout << fixed;

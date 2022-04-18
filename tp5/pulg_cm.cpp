@@ -7,7 +7,7 @@ using namespace std;
 int main ()
 
 {
-    double long_pulg, long_cm;
+    float long_pulg, long_cm;
     cout << endl;
     cout << "Ingrese la longitud en pulgadas: " << endl;
     cin >> long_pulg;

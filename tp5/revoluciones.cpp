@@ -6,12 +6,13 @@ Bahía Blanca a Monte Hermoso?*/
 #include <iostream>
 using namespace std;
 
+const float PI = 3.14159265;
+
 int main ()
 
 {
-    const double PI = 3.141592653589793;
-    double diam_pulg = 20;
-    double dist_km;    
+    float diam_pulg = 20;
+    float dist_km;    
     cout << endl;
     cout << "Ingrese la distancia (km) a recorrer: " << endl;
     cin >> dist_km;
@@ -22,10 +23,10 @@ int main ()
     }
     else
     {
-        double diam_cm = 2.54*diam_pulg;
-        double longcirc_m = PI*diam_cm/100.0;
-        double dist_m = 1000.0*dist_km;
-        double revoluc = dist_m / longcirc_m;
+        float diam_cm = 2.54*diam_pulg;
+        float longcirc_m = PI*diam_cm/100.0;
+        float dist_m = 1000.0*dist_km;
+        float revoluc = dist_m / longcirc_m;
         cout.precision(2);
         cout << fixed;
         cout << "Revoluciones (neumatico 20'' diam): " << revoluc << endl;
