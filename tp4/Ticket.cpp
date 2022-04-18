@@ -1,10 +1,11 @@
 #include <iostream>     
 #include <iomanip>      
 using namespace std;
+
 int main () 
 
 {
-    double manz, peras, total;
+    float manz, peras, total;
     cout << endl << "Ingrese el monto de compra de manzanas (pesos): " << endl;
     cin >> manz;
     cout << "Ingrese el monto de compra de peras (pesos): " << endl;

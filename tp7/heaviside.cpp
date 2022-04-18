@@ -4,13 +4,14 @@ el valor con cout.*/
 
 #include <iostream>
 using namespace std;
+
 int main ()
 {
-    double x; 
+    float x; 
     cout << "Ingrese el valor de X: " << endl;
     cin >> x;
     cout << endl;
-    int heaviside = x < 0 ? 0 : 1; //funcion escalon unitario 
+    int heaviside = (x < 0) ? 0 : 1; //funcion escalon unitario 
     cout << "Heaviside= " << heaviside << endl;
     cout << endl;
     return(0);

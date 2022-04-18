@@ -1,4 +1,5 @@
-/* Problema 5. Reescribir el siguiente código utilizando el operador condicional 
+/*****************************************************************************
+ Problema 5. Reescribir el siguiente código utilizando el operador condicional 
 de C++:
 
     if ( temperatura >= 30.0 )
@@ -9,7 +10,7 @@ de C++:
     {
         cout << “Hermoso día!” << endl;
     }
-*/
+******************************************************************************/
 
 #include <iostream>
 #include <string>
@@ -17,11 +18,10 @@ using namespace std;
 
 int main ()
 {
-    double temperatura;
-    string Msj;
+    float temperatura;
     cout << endl << "Ingrese la temperatura (Celsius) del dia: ";
     cin >> temperatura;
-    Msj = (temperatura >= 30.0) ? "Hace calor!" : "Hermoso dia!";
-    cout << endl << Msj << endl;
+    string clima = (temperatura >= 30.0) ? "Hace calor!" : "Hermoso dia!";
+    cout << endl << clima << endl;
     return (0);
 }

@@ -6,10 +6,13 @@ programa debe indicar el puntaje que el dardo ha obtenido.*/
 
 #include <iostream>
 using namespace std;
+
+const float R = 5.0;
+
 int main()
 {
-    double R = 5;
-    double x, y; 
+    
+    float x, y; 
     cout << endl;
     cout << "Ingrese las coordenadas (x, y) del dardo" << endl;
     cout << "X= " << endl;

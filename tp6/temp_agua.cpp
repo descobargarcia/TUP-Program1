@@ -6,30 +6,23 @@ siguientes mensajes dependiendo de su valor:
     c. VAPOR si el valor de temperatura es mayor que 100.0*/
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main ()
 {
-    double temp;
-    cout << endl << "Ingrese la temperatura (C) del agua: " << endl; 
+    float temp;
+    string Msj;
+    cout << endl << "Ingrese la temperatura (C) del agua: "; 
     cin >> temp;
-    cout << endl; 
     if (temp <= -273.15)
     {
-        cout << "ERROR: T <= -273.15 C (cero absoluto de temp)" << endl;
-    }
-    else if (temp < 0.0)
-    {
-        cout << "HIELO" << endl;
-    }       
-    else if (temp <= 100.0)
-    {
-        cout << "AGUA LIQUIDA" << endl;
+        Msj = "ERROR: T <= -273.15 C (cero absoluto de temp)";
     }
     else
     {
-        cout << "VAPOR" << endl;
-    }
-    cout << endl; 
+        Msj = (temp < 0.0) ? "HIELO" : ((temp < 100.0) ? "AGUA LIQ." : "VAPOR");
+    }       
+    cout << endl << Msj << endl; 
     return 0;
 }

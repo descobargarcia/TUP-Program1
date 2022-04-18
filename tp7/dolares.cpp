@@ -12,23 +12,24 @@ un programa que produzca una de las siguientes salidas:
 #include <iostream>
 #include <string>
 using namespace std;
-int main ()
 
+const float HMIN = 9, HMAX = 15;
+const float TASA_ARS_USD = 120;
+
+int main ()
 {
-    const double HMIN = 9, HMAX = 15;
-    double hora;
+    float hora;
     cout << endl << "BIENVENIDO AL BANCO!" << endl;
     cout << "Ingresar hora de la operacion (formato 24.00 Hs): ";
     cin >> hora; 
     if (hora < HMIN || hora > HMAX)
     {
-        string Msj1 = "Fuera del horario de atencion del banco (9.00 - 15.00 Hs)"; 
-        cout << endl << Msj1 << endl;
+        string Msj0 = "Fuera del horario de atencion del banco (9.00 - 15.00 Hs)"; 
+        cout << endl << Msj0 << endl;
     }
     else
     {
-        const double TASA_ARS_USD = 120;
-        double saldoARS, compraUSD, maxUSD;
+        float saldoARS, compraUSD, maxUSD;
         cout << endl << "Ingrese su saldo en ARS: ";
         cin >> saldoARS;
         cout << "Ingrese el monto a comprar de USD: ";
