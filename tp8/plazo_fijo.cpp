@@ -28,7 +28,7 @@ int main()
     }
     else
     {
-        cout << "Ingrese los meses del plazo (3, 6 o 12): ";
+        cout << "Ingrese los meses del plazo fijo (3, 6 o 12): ";
         cin >> meses;
         if ((meses != 3) && (meses !=6) && (meses != 12))
         {
