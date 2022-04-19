@@ -26,28 +26,27 @@ int main ()
     {
         string Msj0 = "Fuera del horario de atencion (9.00 - 15.00 Hs)"; 
         cout << endl << Msj0 << endl;
+        return 10;
     }
-    else
+    float saldoARS, compraUSD, maxUSD;
+    cout << endl << "Ingrese su saldo en ARS: ";
+    cin >> saldoARS;
+    cout << "Ingrese el monto a comprar de USD: ";
+    cin >> compraUSD;
+    maxUSD = saldoARS / TASA_ARS_USD;
+    if (compraUSD > maxUSD) 
     {
-        float saldoARS, compraUSD, maxUSD;
-        cout << endl << "Ingrese su saldo en ARS: ";
-        cin >> saldoARS;
-        cout << "Ingrese el monto a comprar de USD: ";
-        cin >> compraUSD;
-        maxUSD = saldoARS / TASA_ARS_USD;
-        if (compraUSD > maxUSD) cout << endl << "Fondos insuficientes";
-        else
-        {
-            saldoARS = saldoARS - compraUSD*TASA_ARS_USD;
-            string Msj1 = "Transaccion realizada. Ud compro ";
-            string Msj2 = " dolares a ";
-            string Msj3 = " pesos c/u. Su saldo remanente es: ";
-            cout.precision(2);
-            cout << fixed;
-            cout << endl << Msj1 << compraUSD << Msj2 << TASA_ARS_USD; 
-            cout << Msj3 << saldoARS << " ARS." << endl;
-        }
+        cout << endl << "Fondos insuficientes" << endl;
+        return 20;
     }
-    cout << endl; 
+    saldoARS = saldoARS - compraUSD*TASA_ARS_USD;
+    string Msj1 = "Transaccion realizada. Ud compro ";
+    string Msj2 = " dolares a ";
+    string Msj3 = " pesos c/u.";
+    string Msj4= "Su saldo remanente es: ";
+    cout.precision(2);
+    cout << fixed;
+    cout << endl << Msj1 << compraUSD << Msj2 << TASA_ARS_USD << Msj3; 
+    cout << endl << Msj4 << saldoARS << " ARS." << endl;
     return 0;
 }

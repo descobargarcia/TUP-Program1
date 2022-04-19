@@ -16,13 +16,14 @@ int main ()
     bool esHielo, esVapor;
     cout << endl << "Ingrese la temperatura (C) del agua: "; 
     cin >> temp;
-    if (temp <= -273.15) msj_salida = "ERROR: T <= -273.15 C (cero absoluto de temp)";
-    else 
+    if (temp <= -273.15) 
     {
-        esHielo = temp < 0.0;
-        esVapor = temp > 100.0;
-        msj_salida = esHielo ? "HIELO" : (esVapor ? "VAPOR" : "AGUA LIQ.");
-    } 
+        cout << endl << "ERROR: T <= -273.15 C (cero absoluto de temp)" << endl;
+        return 10;
+    }
+    esHielo = temp < 0.0;
+    esVapor = temp > 100.0;
+    msj_salida = esHielo ? "HIELO" : (esVapor ? "VAPOR" : "AGUA LIQ.");
     cout << endl << msj_salida << endl; 
     return 0;
 }

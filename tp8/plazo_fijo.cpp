@@ -37,7 +37,7 @@ int main()
         return 20;
     } 
     //Primer rango de depositos
-    if (dep <= DEPL1 && meses == 3)         tasaMens = 0.02; 
+    if      (dep <= DEPL1 && meses == 3)    tasaMens = 0.02; 
     else if (dep <= DEPL1 && meses == 6)    tasaMens = 0.03;
     else if (dep <= DEPL1 && meses == 12)   tasaMens = 0.04;
     //Segundo rango de depositos
@@ -45,8 +45,8 @@ int main()
     else if (dep <= DEPL2 && meses == 6)    tasaMens = 0.04;
     else if (dep <= DEPL2 && meses == 12)   tasaMens = 0.05;
     //Tercer rango de depositos
-    else if (dep > DEPL2 && meses == 3)     tasaMens = 0.04;
-    else if (dep > DEPL2 && meses == 6)     tasaMens = 0.05;
+    else if (dep >  DEPL2 && meses == 3)    tasaMens = 0.04;
+    else if (dep >  DEPL2 && meses == 6)    tasaMens = 0.05;
     else                                    tasaMens = 0.06;
     //Calculos finales
     intereses = dep*meses*tasaMens;
