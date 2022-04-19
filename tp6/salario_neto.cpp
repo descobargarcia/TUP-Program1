@@ -26,10 +26,7 @@ int main()
     cout << "Ingrese las horas semanales trabajadas: " << endl;
     cin >> hSem; 
     cout << endl; 
-    if (hSem < 0)
-    {
-        cout << "ERROR: la cantidad de horas no puede ser negativa" << endl;
-    }
+    if (hSem < 0) cout << "ERROR: la cantidad de horas no puede ser negativa" << endl;
     else 
     {
         int hNorm = min (hSem, HMAX);

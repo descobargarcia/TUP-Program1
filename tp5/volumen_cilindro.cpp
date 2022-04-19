@@ -17,10 +17,7 @@ int main ()
     cin >> r;
     cout << "Ingrese la altura o longitud del cilindro: " << endl;
     cin >> h;
-    if ((r<0) || (h<0))
-    {
-        cout << "ERROR: dimension negativa" << endl;
-    }
+    if (r<0 || h<0) cout << "ERROR: dimension negativa" << endl;
     else
     {
         float volumen = PI*h*r*r;

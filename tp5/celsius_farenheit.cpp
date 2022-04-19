@@ -11,10 +11,7 @@ int main ()
     cout << endl << "Ingrese la temperatura (C): " << endl; 
     cin >> tC;
     cout << endl; 
-    if (tC <= -273.15)
-    {
-        cout << "ERROR: T <= -273.15 C (cero absoluto de temp)" << endl;
-    }
+    if (tC <= -273.15) cout << "ERROR: T <= -273.15 C (cero absoluto de temp)" << endl;
     else
     {
         float tF = 32 + 9.0*tC/5.0;

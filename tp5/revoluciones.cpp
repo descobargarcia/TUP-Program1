@@ -17,10 +17,7 @@ int main ()
     cout << "Ingrese la distancia (km) a recorrer: " << endl;
     cin >> dist_km;
     cout << endl;
-    if (dist_km < 0)
-    {
-        cout << "ERROR: distancia negativa" << endl;
-    }
+    if (dist_km < 0) cout << "ERROR: distancia negativa" << endl;
     else
     {
         float diam_cm = 2.54*diam_pulg;

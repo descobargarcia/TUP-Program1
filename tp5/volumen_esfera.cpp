@@ -12,10 +12,7 @@ int main ()
     cout << endl;
     cout << "Ingrese el radio de la esfera: " << endl;
     cin >> r;
-    if (r<0)
-    {
-        cout << "ERROR: radio negativo" << endl;
-    }
+    if (r<0) cout << "ERROR: radio negativo" << endl;
     else
     {
         float volumen = (4.0 / 3.0)*PI*r*r*r;

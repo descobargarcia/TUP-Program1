@@ -15,57 +15,36 @@ Nota: Debe resolverse utilizando el operador && y la estructura if-else if-else
 #include <iostream>
 using namespace std;
 
+const float depLv1 = 1000, depLv2 = 10000;
+
 int main()
 {
     int meses;
-    float deposito, intereses, retorno, tasa_mensual;    
+    float dep, intereses, retorno, tasaMens;    
     cout << endl << "BIENVENIDO AL BANCO!" << endl;
     cout << "Ingrese el monto (pesos) a depositar: ";
-    cin >> deposito;
-    if (deposito <=0)
-    {
-        cout << endl << "Deposito invalido" << endl;
-    }
+    cin >> dep;
+    if (dep <=0) cout << endl << "*Deposito invalido*" << endl;
     else
     {
         cout << "Ingrese los meses del plazo fijo (3, 6 o 12): ";
         cin >> meses;
-        if ((meses != 3) && (meses !=6) && (meses != 12))
-        {
-            cout << endl << "Plazo invalido" << endl;
-        }
+        cout << endl;
+        if (meses != 3 && meses !=6 && meses != 12) cout << "*Plazo invalido*" << endl;
         else 
         {   
-            if (deposito <= 1000 && meses == 3)
-            {
-                tasa_mensual = 0.02;
-            }
-            else if (deposito <=1000 && meses !=3) 
-            {
-                tasa_mensual = (meses == 6) ? 0.03 : 0.04;
-            }
-            else if (deposito <= 10000 && meses == 3)
-            {
-                tasa_mensual = 0.03;
-            }
-            else if (deposito <= 10000 && meses !=3) 
-            {
-                tasa_mensual = (meses == 6) ? 0.04 : 0.05;
-            }
-            else if (deposito > 10000 && meses !=3)
-            {
-                tasa_mensual = 0.04;
-            }
-            else
-            {
-                tasa_mensual = (meses == 6) ? 0.05: 0.06;
-            }
-            intereses = deposito*meses*tasa_mensual;
-            retorno = deposito + intereses;
-            cout << endl << "Su retorno al final del plazo sera: ";
+            if (dep <= 1000 && meses == 3) tasaMens = 0.02;
+            else if (dep <= 1000 && meses !=3) tasaMens = (meses == 6) ? 0.03 : 0.04;
+            else if (dep <= 10000 && meses == 3) tasaMens = 0.03;
+            else if (dep <= 10000 && meses !=3) tasaMens = (meses == 6) ? 0.04 : 0.05;
+            else if (dep > 10000 && meses !=3) tasaMens = 0.04;
+            else tasaMens = (meses == 6) ? 0.05: 0.06;
+            intereses = dep*meses*tasaMens;
+            retorno = dep + intereses;
+            cout << "*Al final del plazo, su retorno sera: ";
             cout.precision(2);
             cout << fixed;
-            cout << retorno << " pesos" << endl;
+            cout << retorno << " pesos*" << endl;
         }
     }
     return 0;

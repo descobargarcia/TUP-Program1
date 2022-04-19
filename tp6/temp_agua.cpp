@@ -12,17 +12,17 @@ using namespace std;
 int main ()
 {
     float temp;
-    string Msj;
+    string msj_salida;
+    bool esHielo, esVapor;
     cout << endl << "Ingrese la temperatura (C) del agua: "; 
     cin >> temp;
-    if (temp <= -273.15)
+    if (temp <= -273.15) msj_salida = "ERROR: T <= -273.15 C (cero absoluto de temp)";
+    else 
     {
-        Msj = "ERROR: T <= -273.15 C (cero absoluto de temp)";
-    }
-    else
-    {
-        Msj = (temp < 0.0) ? "HIELO" : ((temp < 100.0) ? "AGUA LIQ." : "VAPOR");
-    }       
-    cout << endl << Msj << endl; 
+        esHielo = temp < 0.0;
+        esVapor = temp > 100.0;
+        msj_salida = esHielo ? "HIELO" : (esVapor ? "VAPOR" : "AGUA LIQ.");
+    } 
+    cout << endl << msj_salida << endl; 
     return 0;
 }

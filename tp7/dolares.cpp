@@ -24,7 +24,7 @@ int main ()
     cin >> hora; 
     if (hora < HMIN || hora > HMAX)
     {
-        string Msj0 = "Fuera del horario de atencion del banco (9.00 - 15.00 Hs)"; 
+        string Msj0 = "Fuera del horario de atencion (9.00 - 15.00 Hs)"; 
         cout << endl << Msj0 << endl;
     }
     else
@@ -35,10 +35,7 @@ int main ()
         cout << "Ingrese el monto a comprar de USD: ";
         cin >> compraUSD;
         maxUSD = saldoARS / TASA_ARS_USD;
-        if (compraUSD > maxUSD)
-        {
-            cout << endl << "No tiene fondos suficientes"; 
-        }
+        if (compraUSD > maxUSD) cout << endl << "Fondos insuficientes";
         else
         {
             saldoARS = saldoARS - compraUSD*TASA_ARS_USD;

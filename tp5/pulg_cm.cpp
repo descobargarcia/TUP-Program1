@@ -11,10 +11,7 @@ int main ()
     cout << endl;
     cout << "Ingrese la longitud en pulgadas: " << endl;
     cin >> long_pulg;
-    if (long_pulg<0)
-    {
-        cout << "ERROR: longitud negativa" << endl;
-    }
+    if (long_pulg<0) cout << "ERROR: longitud negativa" << endl;
     else
     {
         long_cm = 2.54*long_pulg;
