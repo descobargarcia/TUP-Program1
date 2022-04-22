@@ -9,8 +9,8 @@ int main()
     int numJugUsr, numJugPc, difAux;
     string strJugPc, resultado;
     cout << endl << "PIEDRA, PAPEL O TIJERA: USUARIO vs PC" << endl;
-    cout << "REGLAS: Ganador ---> Perdedor" << endl;
-    cout << "Papel (1) ---> Piedra (2) ---> Tijera (3) ---> Papel (1)" << endl;
+    cout << "REGLAS: Perdedor <--- Ganador" << endl;
+    cout << "Piedra (1) <--- Papel (2) <--- Tijera (3) <--- Piedra (1)" << endl;
     cout << endl << "Ingrese el número de su jugada: ";
     cin >> numJugUsr;
     if (numJugUsr < 1 || numJugUsr > 3)
